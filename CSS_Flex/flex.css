@@ -1,0 +1,14 @@
+#id1{
+    display: flex;
+    border: 2px solid green;
+    padding: 5px;
+    margin: 2px;
+}
+
+#id2{
+    display: flex;
+}
+
+#id3{
+    display: flex;
+}
