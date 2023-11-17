@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datatypes</title>
+</head>
+<body>
+    <script>
+        //primitive:
+        // 1.number:
+        var a = 4;
+        var b = 31.10;
+
+        console.log(typeof a,typeof b);
+
+        // 2.boolean:
+
+        var isDone = false;
+
+        console.log(isDone);
+
+        console.log(typeof isDone);
+
+        // 3.string:
+
+        var x = "Shivani";
+        var y = 'Harish';
+
+        console.log("x = "+x +" y = "+y);
+        console.log(typeof x, typeof y);
+
+        x.concat(y); //Shivani Harish
+        console.log(x); // Shivani
+
+        // in JS, strings are immutable but we can reassign a new value
+
+        x = x.concat(y);
+        console.log(x); //ShivaniHarish
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email</title>
+</head>
+<body>
+    <input type="text" id="email" placeholder="enter email">
+    <button onclick="next()">Next</button>
+
+    <script>
+        function next(){
+            var email = document.getElementById("email").value;
+            console.log(email);
+
+            email = email.trim();
+            console.log(email);
+
+            email = email.toLowerCase();
+            console.log(email);
+
+            if(email.includes('@gmail.com')){
+                console.log(email);
+            }
+            else{
+                email = email.concat('@gmail.com');
+                console.log(email);
+            }
+
+
+        }
+    </script>
+
+</body>
+</html>

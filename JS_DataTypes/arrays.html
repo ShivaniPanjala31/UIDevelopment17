@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+
+</head>
+<body>
+  
+    <input type="text" id="username" placeholder="enter username" onkeyup="validate()"> <span id="msg"></span>
+    <script>
+        var a = [1, "HTML"];
+
+        console.log(a[1]);
+
+        a.push(5);
+
+        a.push('CSS'); //to add an ele in the end
+
+        console.log(a);
+
+        a.unshift('welcome'); //to add element in the beginning
+        console.log(a);
+
+        var users = ["harish","shivani","john","a"];
+
+        
+
+        function validate(){
+            var username = document.getElementById('username').value;
+        if(users.includes(username)){
+            document.getElementById("msg").innerHTML = 'already taken';
+            document.getElementById("msg").style.color = "red";
+        }
+        else{
+            document.getElementById("msg").innerHTML = 'available';
+            document.getElementById("msg").style.color = "green";
+        }
+        }
+
+        
+
+
+    </script>
+    
+</body>
+</html>

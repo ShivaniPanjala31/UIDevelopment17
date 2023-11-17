@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects</title>
+</head>
+<body>
+    
+    <script>
+
+        var emp = {
+            name: "Shivani",
+            eid:3108,
+            address:{
+                hno: 1-228,
+                street: "HN",
+                city: "BHPL",
+                state: "TS"
+            },
+            projects:{
+                name:"E-Learn",
+                client:"KSDC"
+            },
+            isOnshore: true
+        }
+        console.log(emp);
+        console.log(emp.eid);
+        console.log(emp.address.city);
+
+        console.log(emp.isOnshore);
+
+        delete emp.isOnshore;
+
+        console.log(emp);
+
+        console.log(emp.role); //undefined
+        
+    </script>
+
+</body>
+</html>

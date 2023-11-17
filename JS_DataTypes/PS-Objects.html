@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects PS</title>
+</head>
+<body>
+    
+    <input type="text" id="name" placeholder="enter product"> <br><br><br>
+    <input type="text" id="price" placeholder="enter price"> <br><br><br>
+    <input type="text" id="brand" placeholder="enter brand"> <br><br><br>
+    <input type="text" id="imageurl" placeholder="enter imageurl"> <br><br><br>
+
+    <button onclick="addProduct()"> Add Product</button> <br><br><br>
+
+    <div>
+        <img id="img">
+        <h1 id="product"></h1>
+    </div>
+
+    <script>
+        function addProduct(){
+            var name = document.getElementById("name").value;
+            var price = document.getElementById("price").value;
+            var brand = document.getElementById("brand").value;
+            var imageurl = document.getElementById("imageurl").value;
+
+            var product = {
+                name: name,
+                price: price,
+                brand: brand,
+                imageurl: imageurl
+            }
+            console.log(product);
+
+            document.getElementById("img").src = product.imageurl;
+            document.getElementById("product").innerHTML = product.name; 
+        }
+    </script>
+
+</body>
+</html>

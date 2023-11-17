@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="text" id="mbloremail" placeholder="enter phone or email">
+    <input type="password" id="password" placeholder="enter password">
+
+    <button onclick="login()">Login</button>
+
+    <script>
+
+        function login(){
+
+            var mbloremail = document.getElementById("mbloremail").value;
+            var password = document.getElementById("password").value;
+
+            var result = (mbloremail=="abc@email.com"||mbloremail=="12345") && password == "qwerty";
+
+            console.log(result);
+
+            result ? alert("success"):alert("failure");
+
+        }
+
+
+        var a=10;
+        var b=20;
+        var c="30";
+        var d="20s"
+
+        console.log(a+b+c); //3030
+        console.log(c+a+b); //3030
+        console.log(a+c+b); //103020
+        // + acts as concat operator & - converts string into numbers
+        console.log(a-c); //-20
+        console.log(a-d); //NaN
+
+
+    </script>
+</body>
+</html>
