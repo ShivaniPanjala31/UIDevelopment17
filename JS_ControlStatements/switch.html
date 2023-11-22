@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch</title>
+</head>
+<body>
+    <label >District:</label>
+    <select name="" id="district" onchange="districtSelected()">
+        <option value="">Select</option>
+        <option value="hyd">Hyd</option>
+        <option value="wgl">Wgl</option>
+        <option value="hnk">Hnk</option>
+        <option value="knr">Knr</option>
+        <option value="bhpl">BHPL</option>
+    </select>
+<br><br>
+    <label >Test-Center:</label>
+
+    <select name="" id="testcenter">
+        <option value="">Select</option>
+    </select>
+
+    <script>
+        var a = "java";
+
+        function districtSelected(){
+        var district = document.getElementById("district").value;
+        var testCenter = document.getElementById("testcenter");
+        // console.log(district);
+        switch(district){
+            case "hyd": testCenter.innerHTML = "<option> select </option> <option> HYD-A </option> <option>  HYD-B </option>"; break ;
+            case "wgl": testCenter.innerHTML = "<option> select </option> <option> WGL-A </option> <option>  WGL-B </option>"; break;
+            case "hnk": testCenter.innerHTML = "<option> select </option> <option> HNK-A </option> <option>  HNK-B </option>"; break;
+            case "knr": testCenter.innerHTML = "<option> select </option> <option> KNR-A </option> <option>  KNR-B </option>"; break;
+            case "bhpl": testCenter.innerHTML = "<option> select </option> <option> BHPL-A </option> <option>  BHPL-B </option>";break;
+        }
+    }
+
+        // switch(a){
+        //     case "JS": console.log("JS"); break;
+        //     case "java": console.log("java"); break; //if break is not given then next statement also get executed
+        //     case "python": console.log("python"); break;
+        //     case "SQL": console.log("SQL"); break;
+        //     default: console.log("not avl");
+        // }
+
+        
+
+    </script>
+    
+</body>
+</html>

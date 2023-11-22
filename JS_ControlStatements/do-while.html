@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>do-while</title>
+</head>
+<body>
+    <ul id="products"></ul>
+    <script>
+        var products = [
+            {
+                "name" : "Canon R100 Mirrorless Camera RF-S 18-45mm f/4.5-6.3 IS STM  (Black)",
+                "url" : "https://rukminim2.flixcart.com/image/312/312/xif0q/dslr-camera/i/o/c/eos-r100-24-1-eos-r100-kit-canon-original-imagqeydhsxgacxp.jpeg?q=70"
+            },
+            {
+                "name" : "Canon R100 Mirrorless Camera RF-S 18-45mm f/4.5-6.3 IS STM  (Black)",
+                "url" : "https://rukminim2.flixcart.com/image/312/312/xif0q/dslr-camera/i/o/c/eos-r100-24-1-eos-r100-kit-canon-original-imagqeydhsxgacxp.jpeg?q=70"
+            },
+            {
+                "name" : "Canon R100 Mirrorless Camera RF-S 18-45mm f/4.5-6.3 IS STM  (Black)",
+                "url" : "https://rukminim2.flixcart.com/image/312/312/xif0q/dslr-camera/i/o/c/eos-r100-24-1-eos-r100-kit-canon-original-imagqeydhsxgacxp.jpeg?q=70"
+            },
+            {
+                "name" : "Canon R100 Mirrorless Camera RF-S 18-45mm f/4.5-6.3 IS STM  (Black)",
+                "url" : "https://rukminim2.flixcart.com/image/312/312/xif0q/dslr-camera/i/o/c/eos-r100-24-1-eos-r100-kit-canon-original-imagqeydhsxgacxp.jpeg?q=70"
+            }
+        ]
+
+        var index=0;
+
+        
+        var productList = "";
+
+        do{
+            var product = products[index];
+            productList = productList + "<li>"+ product.name +"<img src="+product.url+"></li>";
+            index++;
+        }
+        while(index < products.length){
+     
+        }
+        console.log(productList);
+
+        document.getElementById("products").innerHTML = productList;
+    </script>
+</body>
+</html>
