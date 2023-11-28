@@ -9,13 +9,20 @@
     <script>
 
         function pwdCheck(str){
-            if(typeof str != string){
-                throw new Error("invalid data type");
+            if(typeof str != "string"){
+                throw new Error("invalid data type passeds");
             }
             else{
                 console.log("valid");
             }
         }
+        try{
+            pwdCheck(24);
+        }
+        catch(error){
+            console.log(error);
+        }
+        
     </script>
 </body>
 </html>

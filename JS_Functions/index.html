@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions</title>
+</head>
+<body>
+    <script>
+        function sample(name,pwd){
+            if(name=="sony"&&pwd=="abc"){
+                console.log("success");
+            }
+            else{
+                console.log("failure");
+            }
+        }
+
+        sample("sony","abc");
+
+        
+
+       
+        
+        function f1(a,b){
+            console.log(a,b);
+        }
+        f1(4,5);  //if we have 2 functions with same name then the latest one will get executed
+        function f1(){
+            console.log("duplicate function");
+        }
+        
+    
+    </script>
+</body>
+</html>

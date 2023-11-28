@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Class Finction</title>
+</head>
+<body>
+    
+    <script>
+        function f1(){
+            return function(){
+                console.log("returned function");
+            }
+        }
+
+        var a=f1();
+        a();
+
+        (f1())();   //IIFE
+
+        (function f2(){    //IIFE
+            console.log("this is IIFE"); //Executed only once becaz we cant call/invoke it as it doesn't have any name 
+        })();
+
+    </script>
+
+</body>
+</html>

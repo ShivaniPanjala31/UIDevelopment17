@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var users = ["user 1","user 2","user 3"];
+
+        users.forEach(function(v,i){
+            console.log(v);
+        })
+
+        function f1(a){
+            console.log("f1 function");
+            a();
+        }
+        f1(function(){            //callback function
+            console.log("callback function");
+        })
+        b = function(){            //function expression
+            console.log("callback function using function expression");
+        };
+        function f2(x){
+            b();
+        }
+
+        f2(b);
+
+    </script>
+</body>
+</html>
