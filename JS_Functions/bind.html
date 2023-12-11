@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bind method</title>
+</head>
+<body>
+    
+    <script>
+        var emp = {
+            name:"Shivani",
+            address: "HYD",
+            getDetails: function(){
+                console.log(this.name,this.address);
+            }
+        }
+
+        var cus = {
+            name:"Harish",
+            address: "HNK"
+        }
+
+        a = emp.getDetails.bind(cus);
+        // console.log(a);
+
+        a();
+        
+    </script>
+
+</body>
+</html>
