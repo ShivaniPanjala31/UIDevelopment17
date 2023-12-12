@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var date = new Date();
+
+        console.log(date);
+
+        console.log(date.getDate());
+        console.log(date.getDay());
+        console.log(date.getMonth()+1);  //month starts from 0 as jan
+        console.log(date.getFullYear());
+        console.log(date.getTime());
+        console.log(date.getHours());
+        console.log(date.getMinutes());
+
+
+        function getTimestamp(){
+            var time = concatZero(date.getHours())+':'+concatZero(date.getMinutes())+':'+concatZero(date.getSeconds());
+            var day = date.getMonth()+':'+date.getDate()+':'+date.getFullYear();
+
+            return time+'  '+day;
+
+        }
+
+        console.log(getTimestamp());
+
+        function concatZero(input){
+            if(input<10){
+                return '0'+input;
+            }
+            return input;
+        }
+    </script>
+</body>
+</html>

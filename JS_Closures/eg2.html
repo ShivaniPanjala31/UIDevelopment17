@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closures</title>
+</head>
+<body>
+    
+    <script>
+        
+
+        function one(){
+            var a = 4;
+
+            function inside(){
+                console.log(a); //here a just holds the reference but not the value 
+
+            }
+            inside();   //here 4 
+            a = 8; 
+            inside();   //here 8 
+            
+        }
+        one();
+
+    </script>
+
+</body>
+</html>

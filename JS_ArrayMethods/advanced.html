@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var arr = [6,1,7,2,9,3,8,4,5,'sony','shiv'];
+
+        //ascending
+        arr.sort(function(a,b){
+            return a-b;
+        })
+
+        console.log(arr);
+
+        //descending
+        arr.sort(function(a,b){
+            return b-a;
+        })
+
+        console.log(arr);
+
+        arr.forEach(function(value){
+            console.log(value);
+        })
+
+        var numary = arr.filter(function(value){
+            return typeof value == "number";
+        })
+
+        console.log(numary);
+
+        var result = numary.map(function(value){
+            return value*2;
+        })
+
+        console.log(result);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Call by Value</title>
+</head>
+<body>
+    <script>
+        var a = 100;
+
+        function f1(x){
+            console.log(x);
+            x = 200;
+        }
+
+        f1(a); //call by value :: f1(100) applied on primitive types
+
+    </script>
+</body>
+</html>

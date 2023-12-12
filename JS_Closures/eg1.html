@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closures</title>
+</head>
+<body>
+
+    <button onclick="user('login')">Login</button>
+    <button onclick="user('register')">Register</button>
+    <button onclick="user('changePassword')">changePassword</button>
+    <script>
+        
+        //here we are privatizing the functions 
+
+        function user(a){               
+
+            var x = 48;
+
+            //we can choose which function to execute based on our requirement
+
+            function login(){
+                console.log("login function");
+                console.log(x);                    //we can access outer function vars in inner function(LEXICAL SCOPE)
+            }
+            function register(){                     
+                console.log("register function");
+                console.log(x);
+            }
+            function changePassword(){
+                console.log("changePassword function");
+                console.log(x);
+            }
+
+            switch(a){
+                 case "login":   login(); break;
+                 case "register": register(); break; 
+                 case  "changePassword": changePassword(); break;
+                 default : console.log("invalid operation");
+                 }
+
+        }
+
+    </script>
+</body>
+</html>

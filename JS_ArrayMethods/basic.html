@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic array methods</title>
+</head>
+<body>
+  <script>
+    var ary = [];
+
+    ary.push(10);
+    ary.push(20);  //adds at the end
+    ary.push(30);
+    console.log(ary);
+
+    ary.unshift(5);  //adds in the beginning
+    console.log(ary);
+
+    ary.pop();           //removes last ele
+    console.log(ary);
+
+    ary.shift();            //removes 1st ele
+    console.log(ary);
+
+    var index = ary.indexOf(20);
+    ary.splice(index,0,15);     //at specific index adds the ele
+    console.log(ary);
+
+    ary.push(25);
+
+    var ind = ary.indexOf(20);
+    ary.splice(ind,1);               //at specific index removes the ele
+    console.log(ary);
+
+    ary.push(30);
+    ary.push(35);
+    console.log(ary);
+
+    var i = ary.indexOf(25);
+    ary.splice(i);                //removes all the eles from the specified index
+    console.log(ary);
+    
+
+  </script>  
+</body>
+</html>
