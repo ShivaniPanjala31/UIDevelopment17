@@ -9,13 +9,23 @@
     <script>
         var str = "hello how are you doing";
         var newstr = str.split(" ");
-        console.log(newstr)
+        console.log(newstr.length);
         var n = '';
-        for(i=0;i<newstr.length;i++){
+        var result='';
 
-            
+        for(i=0;i<newstr.length;i++){
+            // console.log(newstr[i].length);
+            n = newstr[i];
+
+            for(j=n.length-1;j>=0;j--){
+
+                result = result+n[j];
+            }
+
+            result=result+' ';
 
         }
+        console.log(result);
     </script>
 </body>
 </html>

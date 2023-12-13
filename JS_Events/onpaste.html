@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Onpaste Event</title>
+  </head>
+  <body oncopy="return oncopyHandler()">
+    <input
+      type="text"
+      onpaste="return onpasteHandler()"
+      placeholder="enter acct no."
+    />
+    <span id="msg"></span>
+
+    <p>
+      A fairy tale is a short story that belongs to the folklore genre. Such
+      stories typically feature magic, enchantments, and mythical or fanciful
+      beings. In most cultures, there is no clear line separating myth from folk
+      or fairy tale; all these together form the literature of preliterate
+      societies. A fairy tale is a short story that belongs to the folklore
+      genre. Such stories typically feature magic, enchantments, and mythical or
+      fanciful beings. In most cultures, there is no clear line separating myth
+      from folk or fairy tale; all these together form the literature of
+      preliterate societies.
+    </p>
+    <span id="msg1"></span>
+    <script>
+      function onpasteHandler() {
+        document.getElementById("msg").innerText = "You can't paste over here";
+        return false;
+      }
+
+      function oncopyHandler() {
+        // document.getElementById("msg1").innerText = "Copiying content is disabled"
+        alert("Copiying content is disabled");
+      }
+    </script>
+  </body>
+</html>

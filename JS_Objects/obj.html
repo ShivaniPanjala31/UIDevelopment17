@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Objects methods</title>
+  </head>
+  <body>
+    <script>
+      var users = {
+        name: "shivani",
+        age: 20,
+        email: "sony@gmail",
+        mobile: 8989898989,
+        address: "Hyd",
+      };
+      console.log(users);
+      var user = Object.create(users);
+      console.log(user);
+      console.log(user.name);
+      console.log(user.age);
+
+      user.lastName = "harish";
+      console.log(user);
+
+      var user_keys = Object.keys(users);
+      console.log(user_keys);
+
+      var user_values = Object.values(users);
+      console.log(user_values);
+
+      var config = Object.freeze({
+        port: 1011,
+        ip: "10.10.1.0",
+        username: "admin",
+      });
+
+      config.password = "admin";  //not added due to freeze
+
+      console.log(config);
+
+      console.log(Object.isFrozen(config));
+      console.log(Object.isFrozen(users));
+
+      
+    </script>
+  </body>
+</html>

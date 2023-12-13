@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Table using Objects</title>
+
+    <style>
+      tr {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <table border="1" width="100%">
+      <thead id="thead"></thead>
+
+      <tbody id="tbody"></tbody>
+    </table>
+
+    <script>
+      var users = [
+        {
+          name: "kiran",
+          address: "hyderabad",
+          age: 31,
+          mobile: 9987654356,
+          email: "kiran@email",
+        },
+        {
+          name: "rajesh",
+          address: "banglore",
+          age: 21,
+          mobile: 9987654356,
+          email: "rajesh@email",
+        },
+        {
+          name: "naveen",
+          address: "chennai",
+          age: 45,
+          mobile: 9987654356,
+          email: "naveen@email",
+        },
+        {
+          name: "shivani",
+          address: "mumbai",
+          age: 25,
+          mobile: 9945354356,
+          email: "shivani@email",
+        },
+      ];
+
+      var user = users[0];
+
+      console.log(user);
+
+      var keys = Object.keys(user);
+      console.log(keys);
+
+      var head = "";
+      keys.forEach(function (key) {
+        head = head + "<th>" + key + "</th>";
+      });
+
+      document.getElementById("thead").innerHTML = head;
+
+      var rows = "";
+      users.forEach(function (user) {
+        // console.log(user);
+        var values = Object.values(user);
+        // console.log(values);
+        var row = "<tr>";
+        values.forEach(function (value) {
+          // console.log(value);
+
+          row = row + "<td>" + value + "</td>";
+        });
+        row = row + "</tr>";
+        rows = rows + row;
+      });
+
+      document.getElementById("tbody").innerHTML = rows;
+    </script>
+  </body>
+</html>

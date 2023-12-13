@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL flipkart</title>
+</head>
+<body>
+    <ul id="product">
+
+    </ul>
+    <script>
+
+        var products = [
+            {
+                imgUrl:'https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/6/v/0/c51-mzb0dxkin-poco-original-imagzdpycgrcdc8z.jpeg?q=70',
+                name:'POCO C51 (Royal Blue, 64 GB)  (4 GB RAM)',
+                redirectUrl:'https://www.flipkart.com/poco-c51-royal-blue-64-gb/p/itm1e4e8373537a7?pid=MOBGZCQFCWNDK89P&lid=LSTMOBGZCQFCWNDK89POEPN6S&marketplace=FLIPKART&fm=neo%2Fmerchandising&iid=M_e9be69fa-74eb-495f-8038-45199b9ee19e_31_Z7D3CY70LPX3_MC.MOBGZCQFCWNDK89P&ppt=clp&ppn=mobile-big-year-end-sale-as48-store&ssid=uxk84elkjk0000001702451570568&otracker=clp_pmu_v2_Poco%2Bsmartphones_2_31.productCard.PMU_V2_POCO%2BC51%2B%2528Royal%2BBlue%252C%2B64%2BGB%2529_mobile-big-year-end-sale-as48-store_MOBGZCQFCWNDK89P_neo%2Fmerchandising_1&otracker1=clp_pmu_v2_PINNED_neo%2Fmerchandising_Poco%2Bsmartphones_LIST_productCard_cc_2_NA_view-all&cid=MOBGZCQFCWNDK89P'
+            },
+            {
+                imgUrl:'https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/6/v/0/c51-mzb0dxkin-poco-original-imagzdpycgrcdc8z.jpeg?q=70',
+                name:'POCO C51 (Royal Blue, 64 GB)  (4 GB RAM)',
+                redirectUrl:'https://www.flipkart.com/poco-c51-royal-blue-64-gb/p/itm1e4e8373537a7?pid=MOBGZCQFCWNDK89P&lid=LSTMOBGZCQFCWNDK89POEPN6S&marketplace=FLIPKART&fm=neo%2Fmerchandising&iid=M_e9be69fa-74eb-495f-8038-45199b9ee19e_31_Z7D3CY70LPX3_MC.MOBGZCQFCWNDK89P&ppt=clp&ppn=mobile-big-year-end-sale-as48-store&ssid=uxk84elkjk0000001702451570568&otracker=clp_pmu_v2_Poco%2Bsmartphones_2_31.productCard.PMU_V2_POCO%2BC51%2B%2528Royal%2BBlue%252C%2B64%2BGB%2529_mobile-big-year-end-sale-as48-store_MOBGZCQFCWNDK89P_neo%2Fmerchandising_1&otracker1=clp_pmu_v2_PINNED_neo%2Fmerchandising_Poco%2Bsmartphones_LIST_productCard_cc_2_NA_view-all&cid=MOBGZCQFCWNDK89P'
+            },
+            {
+                imgUrl:'https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/6/v/0/c51-mzb0dxkin-poco-original-imagzdpycgrcdc8z.jpeg?q=70',
+                name:'POCO C51 (Royal Blue, 64 GB)  (4 GB RAM)',
+                redirectUrl:'https://www.flipkart.com/poco-c51-royal-blue-64-gb/p/itm1e4e8373537a7?pid=MOBGZCQFCWNDK89P&lid=LSTMOBGZCQFCWNDK89POEPN6S&marketplace=FLIPKART&fm=neo%2Fmerchandising&iid=M_e9be69fa-74eb-495f-8038-45199b9ee19e_31_Z7D3CY70LPX3_MC.MOBGZCQFCWNDK89P&ppt=clp&ppn=mobile-big-year-end-sale-as48-store&ssid=uxk84elkjk0000001702451570568&otracker=clp_pmu_v2_Poco%2Bsmartphones_2_31.productCard.PMU_V2_POCO%2BC51%2B%2528Royal%2BBlue%252C%2B64%2BGB%2529_mobile-big-year-end-sale-as48-store_MOBGZCQFCWNDK89P_neo%2Fmerchandising_1&otracker1=clp_pmu_v2_PINNED_neo%2Fmerchandising_Poco%2Bsmartphones_LIST_productCard_cc_2_NA_view-all&cid=MOBGZCQFCWNDK89P'
+            }
+        ]
+        
+        var listItems = '';
+        for(i=0;i<products.length;i++){
+            var product = products[i];
+            listItems = listItems + "<li>" + "<img height='100px' width='80px' src="+product.imgUrl+">"+ "<h4>"+ product.name.link(product.redirectUrl)+ "</h4>" + "</li>"
+
+        }
+        document.getElementById("product").innerHTML = listItems;
+
+        var links = document.getElementsByTagName("a");
+
+        for(i=0;i<links.length;i++){
+            links[i].setAttribute("target","_blank");
+            links[i].style.textDecoration="none";
+        }
+    </script>
+
+</body>
+</html>
