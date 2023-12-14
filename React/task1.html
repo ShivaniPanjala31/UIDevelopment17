@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const users = [
+        {
+          firstName: "Rohit",
+          lastName: "Sharma",
+          address: {
+            plotNo: 23,
+            street: "ABC",
+            area: "KPHB",
+            city: "HYD",
+            state: "Telangana",
+          },
+        },
+        {
+          firstName: "Virat",
+          lastName: "Kohli",
+          address: {
+            plotNo: 42,
+            street: "CNC",
+            area: "Gachibowli",
+            city: "HYD",
+            state: "Telangana",
+          },
+        },
+        {
+          firstName: "Hardik",
+          lastName: "Pandya",
+          address: {
+            plotNo: 48,
+            street: "KNR",
+            area: "Raidurg",
+            city: "HYD",
+            state: "Telangana",
+          },
+        },
+      ];
+
+      var newUsers = users.map(function (user) {
+        return {
+          ...user,
+          fullName: user.firstName.concat(" ", user.lastName),
+          transformedAddress:
+            user.address.plotNo +
+            ", " +
+            user.address.street +
+            ", " +
+            user.address.area +
+            ", " +
+            user.address.city +
+            ", " +
+            user.address.state,
+        };
+      });
+
+      console.log(newUsers);
+    </script>
+  </body>
+</html>

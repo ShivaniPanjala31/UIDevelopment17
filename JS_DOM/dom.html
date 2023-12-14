@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <input type="text" id="username">
+    <input type="text" placeholder="password" name="password">
+    <button></button>
+
+    <script>
+        var username = document.getElementById("username");
+        var password = document.getElementsByName("password");
+
+        var btn = document.getElementsByTagName("button");
+
+        username.placeholder = "username here";
+        username.style.color = "blue";
+        password[0].placeholder = "password here";
+
+        btn[0].innerText = "Login";
+
+        
+
+       var login = function logged(){
+            alert("hello!!!");
+            removeEventListener();
+        }
+        btn[0].addEventListener("click",login);
+
+        function removeEventListener(){
+            btn[0].removeEventListener('click',login);
+        }
+
+
+
+
+    </script>
+</body>
+</html>
