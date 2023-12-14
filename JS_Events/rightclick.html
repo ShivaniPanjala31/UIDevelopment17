@@ -1,18 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" oncontextmenu="return oncontextmenuHandler()">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Onpaste Event</title>
+    <title>Right Click Event</title>
   </head>
-  <body oncopy="return oncopyHandler()">
-    <input
-      type="text"
-      onpaste="return onpasteHandler()"
-      placeholder="enter acct no."
-    />
-    <span id="msg"></span>
-
+  <body>
     <p>
       A fairy tale is a short story that belongs to the folklore genre. Such
       stories typically feature magic, enchantments, and mythical or fanciful
@@ -26,14 +19,8 @@
     </p>
 
     <script>
-      function onpasteHandler() {
-        document.getElementById("msg").innerText = "You can't paste over here";
-        return false;
-      }
-
-      function oncopyHandler() {
-        // document.getElementById("msg1").innerText = "Copiying content is disabled"
-        alert("Copiying content is disabled");
+      function oncontextmenuHandler() {
+        alert("right click is disabled");
         return false;
       }
     </script>
