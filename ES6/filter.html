@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter function</title>
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.29.4/moment.min.js"></script>
+
+    <script>
+          const voters = [
+            {
+                firstName: 'Karthik',
+                lastName: 'K',
+                dob: '2000-12-14T03:22:29.810Z',
+            },
+            {
+                firstName: 'Ganesh',
+                lastName: 'K',
+                dob: '1999-12-14T03:22:29.810Z'
+            },
+            {
+                firstName: 'Charan',
+                lastName: 'K',
+                dob: '1996-12-14T03:22:29.810Z'
+            }
+        ];
+
+        var transformedVoters = voters.map(function(voter) {
+            return {...voter, dobFormatted: moment(voter.dob).format('DD/MM/YYYY'), age: moment().diff(voter.dob, 'years')};
+        });
+        console.log(transformedVoters);
+        let filteredVoters = transformedVoters.filter(function(voter){
+            return voter.age >25;
+        })
+        console.log(filteredVoters);
+    </script>
+</body>
+</html>

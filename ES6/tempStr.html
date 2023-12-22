@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const firstName = 'Karthik';
+        const lastName = 'KK';
+
+        let fullName = firstName + lastName;
+
+        console.log(fullName);
+
+        let name = `${firstName} ${lastName}`;
+
+        console.log(name);
+
+        const dateObj = new Date();
+
+        const dateStr = dateObj.getDate() + '/' + (dateObj.getMonth() + 1) + '/' + dateObj.getFullYear();
+
+        console.log(dateStr);
+
+        const newDate = `${dateObj.getDate()}/${dateObj.getMonth() + 1}/${dateObj.getFullYear()}`;
+
+        console.log(newDate);
+    </script>
+</body>
+</html>

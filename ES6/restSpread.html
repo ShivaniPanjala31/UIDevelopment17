@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function getData(one,...paramAry){     //in function rest operator
+            console.log(paramAry);  
+
+        }
+
+        getData(1,2,3,4,5);
+
+
+        const empName = 'Shivani';
+        const emp = {
+            empName,     
+            getEmpName: ()=> this.empName,
+            getName(){
+                return this.empName;  
+            },
+            [10+40]:empName,
+            [`${empName}_is`]:empName   
+        }
+
+        const emp2 = {...emp, location:"Madhapur"}   //in ary & obj spread operator
+
+        console.log(emp2);
+
+        nums = [23,45,21,67,89,43];
+
+        nums2 = [65,...nums,44];
+
+        console.log(nums2);
+    </script>
+</body>
+</html>

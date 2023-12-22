@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reduce method</title>
+</head>
+<body>
+    <script>
+        const products = [
+            {
+                name: 'OPPO Reno10 5G (Ice Blue, 256 GB)',
+                price: 38999,
+                discount: 6000,
+                quantity: 2
+            },
+            {
+                name: 'OPPO Reno10 5G (Ice Blue, 256 GB)',
+                price: 38999,
+                discount: 6000,
+                quantity: 2
+            }
+        ];
+
+        const totAmount = products.reduce(function(acculumator,product){
+            return acculumator+ (product.price-product.discount)*product.quantity;
+        },0)
+
+        console.log("totAmount",totAmount);
+
+        const productsObj = {
+            'OPPO Reno10 5G (Ice Blue, 256 GB)': 38999,
+            'POCO M6 Pro 5G (Power Black, 256 GB)  (8 GB RAM)': 13499,
+            'APPLE iPhone 14 (Blue, 128 GB)': 58999
+        };
+
+        const formattedProducts = Object.keys(productsObj).reduce(function(acculumator,productName){
+            console.log(acculumator);
+            return [...acculumator,{name:productName,price:productsObj[productName]}]
+        },[])
+
+        console.log(formattedProducts);
+
+
+        // arrow function
+        const formattedProducts2 = Object.keys(productsObj).reduce((acculumator,productName)=>
+           [...acculumator,{name:productName,price:productsObj[productName]}]
+        ,[]);
+
+        console.log(formattedProducts2);
+    </script>
+</body>
+</html>

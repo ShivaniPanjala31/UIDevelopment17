@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        nums = [23,45,21,67,89,43]
+        function sortNums(numAry=[],sortOrder='desc'){
+            if(sortOrder=='desc'){
+                return numAry.sort().reverse();
+            }
+            else{
+                return numAry.sort();
+            }
+
+        }
+
+        console.log(sortNums(nums,'asc'));
+        console.log(sortNums(nums));
+    </script>
+</body>
+</html>

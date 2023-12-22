@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Every method</title>
+</head>
+<body>
+    <script>
+         const users = [
+        {
+          firstName: "Rohit",
+          lastName: "Sharma",
+          address: {
+            plotNo: 23,
+            street: "ABC",
+            area: "KPHB",
+            city: "HYD",
+            state: "Telangana",
+          },
+        },
+        {
+          firstName: "Virat",
+          lastName: "Kohli",
+          address: {
+            plotNo: 42,
+            street: "CNC",
+            area: "Gachibowli",
+            city: "HYD",
+            state: "Telangana",
+          },
+        },
+        {
+          firstName: "Hardik",
+          lastName: "Pandya",
+          address: {
+            plotNo: 48,
+            street: "KNR",
+            area: "Raidurg",
+            city: "HYD",
+            state: "Telangana",
+          },
+        },
+      ];
+
+      const isHyd = users.every(function(user){
+        return user.address.city == "HYD";
+      })
+
+      console.log(isHyd,'isHyd');
+
+      const isArea = users.every(function(user){
+        return user.address.area == "KPHB";
+      })
+
+      console.log(isArea,'isArea');
+
+
+    </script>
+</body>
+</html>

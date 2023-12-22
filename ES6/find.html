@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find method</title>
+</head>
+<body>
+    <script>
+         const users = [
+        {
+          firstName: "Rohit",
+          lastName: "Sharma",
+          address: {
+            plotNo: 23,
+            street: "ABC",
+            area: "KPHB",
+            city: "HYD",
+            state: "Telangana",
+          },
+        },
+        {
+          firstName: "Virat",
+          lastName: "Kohli",
+          address: {
+            plotNo: 42,
+            street: "CNC",
+            area: "Gachibowli",
+            city: "HYD",
+            state: "Telangana",
+          },
+        },
+        {
+          firstName: "Hardik",
+          lastName: "Pandya",
+          address: {
+            plotNo: 48,
+            street: "KNR",
+            area: "Raidurg",
+            city: "HYD",
+            state: "Telangana",
+          },
+        },
+      ];
+
+      const value = 48;
+
+      const foundUser = users.find(function(user){
+        // console.log(user);
+        return user.address.plotNo === value;
+      })
+
+      console.log(foundUser);
+
+    </script>
+</body>
+</html>
